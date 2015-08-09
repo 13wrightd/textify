@@ -1,2 +1,2 @@
-Textify
-#Made by Brian West and Dan helped a little...
+#Textify
+Brian West & Dan Wright
