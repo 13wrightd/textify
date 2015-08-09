@@ -4,7 +4,7 @@ var http = require('http').Server(app);
 
 
 app.get('/', function (req, res) {
-  res.send('Hello worl!');
+  res.send('Hello world!');
 });
 
 
