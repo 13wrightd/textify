@@ -7,10 +7,6 @@ app.get('/', function (req, res) {
   res.send('Hello World11!');
 });
 
-app.get('/git.php', function(req, res) {
-  res.sendFile(__dirname+'/git.php');
-});
-
 
 var server = app.listen(3000, function () {
   var host = server.address().address;
