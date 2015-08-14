@@ -6,22 +6,24 @@ block content
 			div.navbar-header
 				a.navbar-brand(href='#') Textify
 	content
-		div.container
+		div.container(ng-controller='ChatController')
 			div.row
 				div.col-md-6
 					form.form-horizontal.chat-form
 						div.form-group
 							label.col-sm-2.control-label(for='username') Username
 							div.col-sm-10
-								input.form-control(type='text', id='username')
+								input.form-control(type='text', id='username', ng-model='username')
 						div.form-group
 							label.col-sm-2.control-label(for='message') Message
 							div.col-sm-10
-								input.form-control(type='text', id='message')
+								input.form-control(type='text', id='message', ng-model='message')
 						div.form-group
 							div.col-sm-offset-2.col-sm-10
-								button.btn.btn-default(type='submit') Submit
+								button.btn.btn-default(type='submit', ng-click='addNewLog()') Submit
 				div.col-md-6.chat-form
 					ul.list-group
-						li.list-group-item Chat example...
-
+						li.list-group-item(ng-repeat='log in logs')
+							span.text-info {{log.username}} said: 
+							span {{log.message}}
+							span.text-muted.pull-right {{log.date | date: 'hh:mm:ss a'}}
