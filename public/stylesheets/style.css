@@ -1,8 +1,26 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+.navbar{
+	background-color: #227845 !important;
+}
+
+.navbar a{
+	color: white !important;
+}
+
+.navbar a:hover{
+	color: #88CBA3 !important;
+}
+
+.chat-form{
+	background-color: #51A874;
+	padding: 10px;
+	margin-bottom: 10px;
+	border-radius: 5px;
 }

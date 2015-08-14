@@ -1,6 +1,27 @@
 extends layout
 
 block content
-	div.container
-		h1= title
-		p Welcome its #{title}
+	nav.navbar.navbar-default
+		div.container-fluid
+			div.navbar-header
+				a.navbar-brand(href='#') Textify
+	content
+		div.container
+			div.row
+				div.col-md-6
+					form.form-horizontal.chat-form
+						div.form-group
+							label.col-sm-2.control-label(for='username') Username
+							div.col-sm-10
+								input.form-control(type='text', id='username')
+						div.form-group
+							label.col-sm-2.control-label(for='message') Message
+							div.col-sm-10
+								input.form-control(type='text', id='message')
+						div.form-group
+							div.col-sm-offset-2.col-sm-10
+								button.btn.btn-default(type='submit') Submit
+				div.col-md-6.chat-form
+					ul.list-group
+						li.list-group-item Chat example...
+
